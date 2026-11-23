@@ -19,7 +19,9 @@ for s in d['slides']:
         body = f'<h1>{html.escape(s["title"])}</h1><p class="sub">給第一次接觸這個主題的人</p><ul class="src">{lis}</ul>'
     else:
         extra = CURVE if s['id'] == 4 else ''
-        body = f'<h2>{html.escape(s["title"])}</h2><div class="cols"><ul>{lis}</ul>{extra}</div>'
+        sec = next(x for x in d['sections'] if x['no'] == s['section'])
+        chip = f'<p class="chip">{sec["no"]} / {len(d["sections"])}　{html.escape(sec["name"])}</p>'
+        body = f'{chip}<h2>{html.escape(s["title"])}</h2><div class="cols"><ul>{lis}</ul>{extra}</div>'
     pages = []
     for b in s['bullets']:
         for p in b['pages']:
@@ -28,6 +30,14 @@ for s in d['slides']:
     if s['id'] == 1:
         foot = '本簡報內容全部取自 <a href="../wiki/index.html">高效學習法 Wiki</a>'
     slides.append(f'<section class="{cls}" data-n="{s["id"]}">{body}<footer>{foot}</footer></section>')
+rows = []
+for sec in d['sections']:
+    pages = [i + 2 for i, s in enumerate(d['slides']) if s.get('section') == sec['no']]
+    rng = f'第 {pages[0]} 頁' if len(pages) == 1 else f'第 {pages[0]}–{pages[-1]} 頁'
+    rows.append(f'<li><a href="#{pages[0]}" data-go="{pages[0]}"><span class="no">{sec["no"]}</span><span class="nm">{html.escape(sec["name"])}<small>{html.escape(sec["q"])}</small></span><span class="pg">{rng}</span></a></li>')
+agenda = ('<section class="slide agenda"><h2>這份簡報的學習地圖</h2><p class="sub">依序回答五個問題，每頁上方會標出你現在在哪一部分</p>'
+          '<ol class="map">' + ''.join(rows) + '</ol><footer>本簡報內容全部取自 <a href="../wiki/index.html">高效學習法 Wiki</a></footer></section>')
+slides.insert(1, agenda)
 CSS = '''
 :root{--bg:#f6f4ee;--fg:#1f2430;--mut:#5d6575;--ac:#1d5c63;--ac2:#c2562b;--card:#fffdf8;--ln:#d9d3c4}
 
@@ -37,6 +47,8 @@ body{background:var(--bg);color:var(--fg);font-family:"Noto Sans TC","PingFang T
 .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw 9vh;gap:3vh}
 .slide.on{display:flex}
 h1{font-size:clamp(2rem,5.4vw,4rem);margin:0;line-height:1.2;color:var(--ac)}
+.chip{margin:0;font-size:clamp(.8rem,1.3vw,1rem);color:var(--ac);font-weight:700;letter-spacing:.04em}
+.agenda{gap:1.6vh}.map{list-style:none;margin:0;padding:0;display:grid;gap:1vh}.map a{display:flex;align-items:center;gap:1.4em;padding:.9vh 1.2em;background:var(--card);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--fg)}.map a:hover{border-color:var(--ac2)}.map .no{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:700;color:var(--ac2);width:1.2em}.map .nm{flex:1;font-size:clamp(1rem,1.8vw,1.35rem);font-weight:700}.map small{display:block;font-weight:400;font-size:.72em;color:var(--mut)}.map .pg{font-size:clamp(.8rem,1.3vw,1rem);color:var(--mut);white-space:nowrap}
 h2{font-size:clamp(1.5rem,3.4vw,2.5rem);margin:0;padding-bottom:1.4vh;border-bottom:3px solid var(--ac2);width:fit-content;max-width:100%}
 .sub{font-size:clamp(1rem,2vw,1.5rem);color:var(--mut);margin:0}
 .cols{display:flex;gap:4vw;align-items:center;flex-wrap:wrap}
@@ -57,7 +69,7 @@ nav a{color:var(--ac);margin-right:6px}nav button{background:var(--card);color:v
 JS = '''
 (function(){var s=[].slice.call(document.querySelectorAll(".slide")),i=0,c=document.getElementById("c"),b=document.querySelector(".bar");
 function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,k){e.classList.toggle("on",k===i)});c.textContent=(i+1)+" / "+s.length;b.style.width=((i+1)/s.length*100)+"%";try{history.replaceState(null,"","#"+(i+1))}catch(e){}}
-document.getElementById("p").onclick=function(){go(i-1)};document.getElementById("n").onclick=function(){go(i+1)};
+[].forEach.call(document.querySelectorAll("[data-go]"),function(a){a.onclick=function(e){e.preventDefault();go(+a.dataset.go-1)}});document.getElementById("p").onclick=function(){go(i-1)};document.getElementById("n").onclick=function(){go(i+1)};
 document.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown")go(i+1);if(e.key==="ArrowLeft"||e.key==="PageUp")go(i-1)});
 var h=parseInt(location.hash.slice(1),10);go(h?h-1:0)})();
 '''

@@ -29,7 +29,7 @@ html = open(root + '/slides/index.html', encoding='utf-8').read()
 for l in sorted(set(re.findall(r'href="\.\./([^"]+)"', html))):
     if not os.path.exists(os.path.join(root, l)): probs.append(('link', 0, f'失效連結 {l}'))
 # 簡報文字與 JSON 一致
-d = json.load(open('draft_v2.json', encoding='utf-8'))
+d = json.load(open('draft_v3.json', encoding='utf-8'))
 import html as H
 for s in d['slides']:
     for bl in s['bullets']:
@@ -51,3 +51,9 @@ for f in glob.glob(root + '/**/*.html', recursive=True):
         if f in targets: probs2.append((f[len(root):], '連到自己'))
 print(f'導覽檢查：發現 {len(probs2)} 個問題')
 for p in probs2: print('-', p)
+
+# 教學結構檢查：除了封面與學習地圖，每一頁上方都要標出所屬部分
+h = open(root + '/slides/index.html', encoding='utf-8').read()
+secs = re.findall(r'<section class="([^"]*)"', h)
+nochip = [i + 1 for i, s in enumerate(re.findall(r'<section class="[^"]*".*?</section>', h, re.S)) if 'title' not in secs[i] and 'agenda' not in secs[i] and 'class="chip"' not in s]
+print('教學結構檢查：每頁都標示所屬部分' if not nochip else f'教學結構檢查：這些頁沒有標示所屬部分 {nochip}')
