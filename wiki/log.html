@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>操作紀錄｜高效學習法 Wiki</title><style>body{max-width:760px;margin:0 auto;padding:24px 16px 64px;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;color:#1f2430;background:#f6f4ee}
+a{color:#1d5c63}h1{color:#1d5c63}blockquote{margin:0 0 1em;padding:.4em 1em;border-left:4px solid #c2562b;background:#fffdf8}
+code{background:#ebe6d8;padding:1px 4px;border-radius:3px}.top{font-size:.9rem;margin-bottom:1.5rem}
+@media(prefers-color-scheme:dark){body{background:#171a20;color:#ecebe6}a{color:#6cc4cc}h1{color:#6cc4cc}blockquote{background:#20242c}code{background:#2a2f39}}</style></head><body><p class="top"><a href="./index.html">← Wiki 目錄</a> ｜ <a href="./../slides/index.html">教學簡報</a></p><h1>操作紀錄</h1>
+<h2>2026-11-16 建立 Wiki</h2>
+<ul>
+<li>主題定為「高效學習法」。</li>
+<li>建立三層結構與規則檔 <code>CLAUDE.md</code>。</li>
+<li>取得 5 篇原始資料存入 <code>raw/</code>（另有 1 篇 Wikipedia "Interleaving" 頁面網址無效，未取得）。</li>
+</ul>
+<h2>2026-11-16 ingest S1：Spaced repetition</h2>
+<ul>
+<li>討論後的決定：</li>
+<li>概念頁的歷史人物只留 Ebbinghaus、Mace、Leitner，其餘放來源頁。</li>
+<li>收錄「遞增間隔與固定間隔效果相近」這個限制，不寫成「一定要越拉越長」。</li>
+<li>使用者提出的問題：遺忘曲線的實驗是背無意義的內容，有意義的內容遺忘速度是否不同？→ 留待 ingest S3（Forgetting curve）時處理。</li>
+<li>新增：<code>sources/s1-spaced-repetition.md</code>、<code>concepts/spaced-repetition.md</code></li>
+<li>更新：<code>index.md</code></li>
+</ul>
+<h2>2026-11-16 ingest S3：Forgetting curve</h2>
+<ul>
+<li>討論後的決定：</li>
+<li>使用者的問題（無意義內容 vs 有意義內容）成為概念頁「限制與注意」的第一條。</li>
+<li>來源沒有給「有意義內容慢多少」的數字，所以不寫具體差距。</li>
+<li>「24 小時內複習可重設曲線」收錄，但標明是主張、非定論。</li>
+<li>更正：使用者原本記得是背「數列」，來源寫的是無意義音節（nonsense syllables）。</li>
+<li>新增：<code>sources/s3-forgetting-curve.md</code>、<code>concepts/forgetting-curve.md</code></li>
+</ul>
+<h2>2026-11-16 ingest S2：Testing effect</h2>
+<ul>
+<li>討論後的決定：</li>
+<li>來源沒有效果量或百分比，概念頁與簡報都以文字說明，不寫「提升幾 %」。</li>
+<li>新增：<code>sources/s2-testing-effect.md</code>、<code>concepts/testing-effect.md</code></li>
+<li>更新：<code>concepts/spaced-repetition.md</code>（補相關頁面連結）、<code>index.md</code></li>
+</ul>
+<h2>2026-11-23 ingest S4、S5：Desirable difficulty、Dunlosky</h2>
+<ul>
+<li>討論後使用者的決定：</li>
+<li>S4 延後回饋那句擷取壞掉，整句不收，只留「任何回饋都比沒有好」。</li>
+<li>S2 與 S5 對「卡片何時移出」的說法不同：兩邊都寫，並標明差別在移出之後有沒有再測。</li>
+<li>新增三個概念頁：有益的困難、學習策略評比、交錯練習；追問為什麼與自我解釋只放在評比頁，不另開。共 6 個概念頁。</li>
+<li>新增：<code>sources/s4-desirable-difficulty.md</code>、<code>sources/s5-dunlosky-toolbox.md</code>、<code>concepts/desirable-difficulty.md</code>、<code>concepts/study-strategy-ratings.md</code>、<code>concepts/interleaved-practice.md</code></li>
+<li>更新：<code>concepts/testing-effect.md</code>（補 S5 差異與連結）、<code>concepts/spaced-repetition.md</code>、<code>concepts/forgetting-curve.md</code>（相關頁面）、<code>index.md</code></li>
+</ul></body></html>

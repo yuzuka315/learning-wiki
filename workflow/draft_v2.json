@@ -1,0 +1,392 @@
+{
+ "title": "高效學習法：怎麼讀才記得久",
+ "slides": [
+  {
+   "id": 1,
+   "title": "高效學習法：怎麼讀才記得久",
+   "kind": "title",
+   "bullets": [
+    {
+     "text": "資料來源：Wikipedia 四篇 [S1][S2][S3][S4]，Dunlosky（2013）一篇 [S5]",
+     "pages": [
+      "spaced-repetition",
+      "testing-effect",
+      "forgetting-curve",
+      "desirable-difficulty",
+      "study-strategy-ratings",
+      "interleaved-practice"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "title": "你可能正在用效果較差的讀書法",
+   "bullets": [
+    {
+     "text": "一所頂尖大學的調查中，84% 的學生靠重讀筆記或課本來讀書。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "重讀的效果不一致，優勢也不一定持久。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "重讀會造成 illusion of learning：內容看起來熟悉，但未必有深入處理。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "title": "讀書方法的效果分級",
+   "bullets": [
+    {
+     "text": "最有效：practice testing（自我測驗）、distributed practice（分散練習）。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "有潛力：interleaved practice、elaborative interrogation、self-explanation。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "較無效：rereading、highlighting、summarization、imagery。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "畫重點與單純閱讀相比並未帶來幫助；一項研究中，畫重點的學生在跨概念推論的理解測驗上表現較差。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "title": "遺忘曲線：不複習會忘多快",
+   "bullets": [
+    {
+     "text": "遺忘曲線描述沒有刻意保留時，記憶隨時間下降的情形。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    },
+    {
+     "text": "典型圖形顯示：不複習的話，數天到數週內大約只剩一半。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    },
+    {
+     "text": "每次複習都會讓曲線變平，下一次複習的間隔也跟著變長。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    },
+    {
+     "text": "Ebbinghaus 在 1880–1885 年用自己當受試者，背無意義音節（例如 WID、ZOF）。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "title": "遺忘曲線的限制",
+   "bullets": [
+    {
+     "text": "原實驗只有一位受試者，背的是無意義音節，數字不能直接套用在有意義的內容上。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    },
+    {
+     "text": "來源沒有提供「有意義的內容忘得慢多少」的數字，所以這裡不寫具體差距。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    },
+    {
+     "text": "「24 小時內複習可以重設曲線」是部分學習顧問的主張，不是已確立的發現。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "title": "有益的困難：費力一點，記得久一點",
+   "bullets": [
+    {
+     "text": "Robert Bjork 在 1994 年提出：需要適當努力的學習任務，會提升長期表現。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    },
+    {
+     "text": "困難的任務一開始學得慢，但長期效益較大。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    },
+    {
+     "text": "簡單的方法短期表現較好，容易被誤認為真正學會。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    },
+    {
+     "text": "但任務必須做得到：太難會讓學習者氣餒。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "title": "測驗效應：自己把答案想出來",
+   "bullets": [
+    {
+     "text": "讀書時花一部分時間從記憶中提取內容，長期記憶會比一直重讀更好。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "困難但成功的回想，比輕鬆的回想更有助於記憶。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "即使沒想出來，嘗試產生答案的過程也有幫助。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "簡答與申論的效益高於選擇題。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "title": "怎麼做：卡片自我測驗",
+   "bullets": [
+    {
+     "text": "卡片一面寫關鍵詞、一面寫答案；先寫出答案再對照。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "練到每個概念至少答對一次；答對的卡片移出，答錯的放回最後。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "隔天再測一次。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "卡片太早移出會降低長期保留。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "兩種說法的差別在於移出之後有沒有再測。[S2][S5]",
+     "pages": [
+      "testing-effect",
+      "study-strategy-ratings"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "title": "間隔複習：把複習拉開",
+   "bullets": [
+    {
+     "text": "每次成功回想，下次複習的間隔就拉長；回想失敗就退回較早的階段。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "適合需要大量記憶並長期保留的內容，例如第二語言單字。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "Mace（1932）提出間隔逐漸拉長，大約是 1、2、4、8 天。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "和自己回想結合使用，可以提升長期記憶。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "title": "Leitner system：用盒子排複習",
+   "bullets": [
+    {
+     "text": "把卡片分成幾組，答對的往下一組移，答錯的回到第一組。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "越後面的組別複習間隔越長。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "也可以用 Anki 這類軟體自動排程，並設定目標回想率，例如 90%。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "title": "交錯練習：不同內容穿插著練",
+   "bullets": [
+    {
+     "text": "在間隔中穿插其他科目，稱為 interleaving。[S4]",
+     "pages": [
+      "interleaved-practice"
+     ]
+    },
+    {
+     "text": "體積計算研究：集中練習組練習時表現好，但一週後測驗很差；交錯組的成績約為三倍。[S5]",
+     "pages": [
+      "interleaved-practice"
+     ]
+    },
+    {
+     "text": "並非所有內容都有效：法文單字分類、高中逗號規則未見效益。[S5]",
+     "pages": [
+      "interleaved-practice"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "title": "排一個讀書計畫",
+   "bullets": [
+    {
+     "text": "考前先規劃：要讀幾次、各在什麼時候、每次讀什麼。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "建議起點：每門課每週兩個短的讀書時段，包含新內容與舊內容。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "分散練習比集中練習感覺更費力，但學得更久。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    },
+    {
+     "text": "只複習一次時，最佳時機大約在「距離需要用到這個資訊的時間」的 10–20%。[S3]",
+     "pages": [
+      "forgetting-curve"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "title": "這些方法的限制",
+   "bullets": [
+    {
+     "text": "測驗效應的來源沒有提供效果量，多數研究在 WEIRD 國家進行。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "間隔一定要越拉越長並沒有定論：遞增與固定間隔的效果相近。[S1]",
+     "pages": [
+      "spaced-repetition"
+     ]
+    },
+    {
+     "text": "多數研究只涵蓋數小時到數天，數十年的效果仍未知。[S4]",
+     "pages": [
+      "desirable-difficulty"
+     ]
+    },
+    {
+     "text": "再好的策略也需要學生有動機。[S5]",
+     "pages": [
+      "study-strategy-ratings"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "title": "重點整理",
+   "bullets": [
+    {
+     "text": "少重讀，多自己回想（測驗效應）。[S2]",
+     "pages": [
+      "testing-effect"
+     ]
+    },
+    {
+     "text": "把複習分散開（間隔複習），也可以穿插不同內容（交錯練習）。[S1][S4]",
+     "pages": [
+      "spaced-repetition",
+      "interleaved-practice"
+     ]
+    },
+    {
+     "text": "分散練習比集中練習感覺更費力，但學得更久；簡單的方法短期表現好，容易被誤認為學會。[S5][S4]",
+     "pages": [
+      "study-strategy-ratings",
+      "desirable-difficulty"
+     ]
+    }
+   ]
+  }
+ ]
+}
