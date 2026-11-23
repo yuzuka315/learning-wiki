@@ -30,7 +30,7 @@ for s in d['slides']:
     slides.append(f'<section class="{cls}" data-n="{s["id"]}">{body}<footer>{foot}</footer></section>')
 CSS = '''
 :root{--bg:#f6f4ee;--fg:#1f2430;--mut:#5d6575;--ac:#1d5c63;--ac2:#c2562b;--card:#fffdf8;--ln:#d9d3c4}
-@media(prefers-color-scheme:dark){:root{--bg:#171a20;--fg:#ecebe6;--mut:#a3a9b6;--ac:#6cc4cc;--ac2:#f09a73;--card:#20242c;--ln:#363c48}}
+
 *{box-sizing:border-box}html,body{margin:0;height:100%}
 body{background:var(--bg);color:var(--fg);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;overflow:hidden}
 .deck{height:100%;position:relative}
