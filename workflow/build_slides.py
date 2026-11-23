@@ -50,7 +50,7 @@ ul.src{font-size:clamp(.9rem,1.5vw,1.15rem);color:var(--mut);flex:none}
 footer{position:absolute;left:8vw;right:8vw;bottom:4.5vh;font-size:clamp(.75rem,1.2vw,.95rem);color:var(--mut);border-top:1px solid var(--ln);padding-top:1vh}
 footer a{color:var(--ac)}
 nav{position:fixed;right:2vw;bottom:1.2vh;display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--mut)}
-nav button{background:var(--card);color:var(--fg);border:1px solid var(--ln);border-radius:6px;padding:4px 12px;cursor:pointer;font-size:1rem}
+nav a{color:var(--ac);margin-right:6px}nav button{background:var(--card);color:var(--fg);border:1px solid var(--ln);border-radius:6px;padding:4px 12px;cursor:pointer;font-size:1rem}
 .bar{position:fixed;left:0;top:0;height:4px;background:var(--ac2);transition:width .2s}
 @media print{body{overflow:visible}.slide{display:flex!important;position:relative;height:100vh;page-break-after:always}nav,.bar{display:none}}
 '''
@@ -65,7 +65,7 @@ out = f'''<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(d["title"])}</title><style>{CSS}</style></head>
 <body><div class="bar"></div><div class="deck">{''.join(slides)}</div>
-<nav><button id="p" aria-label="上一頁">←</button><span id="c"></span><button id="n" aria-label="下一頁">→</button></nav>
+<nav><a href="../index.html">首頁</a><button id="p" aria-label="上一頁">←</button><span id="c"></span><button id="n" aria-label="下一頁">→</button></nav>
 <script>{JS}</script></body></html>'''
 open('../slides/index.html', 'w', encoding='utf-8').write(out)
 print('slides:', len(slides))

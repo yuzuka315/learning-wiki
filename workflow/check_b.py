@@ -36,3 +36,18 @@ for s in d['slides']:
         if H.escape(bl['text']) not in html: probs.append(('text', s['id'], '簡報文字與稿件不一致'))
 print(f'發現 {len(probs)} 個問題')
 for pr in probs: print('-', pr)
+
+# 導覽檢查：每一頁都走得回首頁、沒有連到自己、沒有失效連結
+import glob
+probs2 = []
+for f in glob.glob(root + '/**/*.html', recursive=True):
+    txt = open(f, encoding='utf-8').read()
+    d = os.path.dirname(f)
+    targets = [os.path.normpath(os.path.join(d, l)) for l in re.findall(r'href="([^"#]+)"', txt) if not l.startswith('http')]
+    for l in re.findall(r'href="([^"#]+)"', txt):
+        if not l.startswith('http') and not os.path.exists(os.path.join(d, l)): probs2.append((f[len(root):], f'失效連結 {l}'))
+    if f != root + '/index.html':
+        if root + '/index.html' not in targets: probs2.append((f[len(root):], '沒有連回首頁'))
+        if f in targets: probs2.append((f[len(root):], '連到自己'))
+print(f'導覽檢查：發現 {len(probs2)} 個問題')
+for p in probs2: print('-', p)

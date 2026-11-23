@@ -34,3 +34,7 @@
   - 新增三個概念頁：有益的困難、學習策略評比、交錯練習；追問為什麼與自我解釋只放在評比頁，不另開。共 6 個概念頁。
 - 新增：`sources/s4-desirable-difficulty.md`、`sources/s5-dunlosky-toolbox.md`、`concepts/desirable-difficulty.md`、`concepts/study-strategy-ratings.md`、`concepts/interleaved-practice.md`
 - 更新：`concepts/testing-effect.md`（補 S5 差異與連結）、`concepts/spaced-repetition.md`、`concepts/forgetting-curve.md`（相關頁面）、`index.md`
+
+## 2026-11-23 lint
+- 檢查：概念頁每一條都有 `[S#]`、連結沒有失效、每頁都收進 index、沒有互相矛盾的說法。結果：沒有問題。
+- 網頁版導覽修正：每頁上方改為「首頁 / Wiki 目錄 / 本頁」，Wiki 目錄頁不再連到自己。

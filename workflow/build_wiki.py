@@ -9,8 +9,13 @@ for f in glob.glob(f'{W}/**/*.md', recursive=True):
     t = re.sub(r'\]\(([^)]+?)\.md\)', r'](\1.html)', t)
     body = markdown.markdown(t)
     rel = os.path.relpath(W, os.path.dirname(f))
-    top = f'<p class="top"><a href="{rel}/index.html">← Wiki 目錄</a> ｜ <a href="{rel}/../slides/index.html">教學簡報</a></p>'
     title = re.match(r'# (.+)', t).group(1)
+    home = rel + '/../index.html'
+    if f.endswith('wiki/index.md'):
+        top = f'<p class="top"><a href="{home}">首頁</a> / Wiki 目錄</p>'
+    else:
+        cur = '操作紀錄' if f.endswith('log.md') else html.escape(title)
+        top = f'<p class="top"><a href="{home}">首頁</a> / <a href="{rel}/index.html">Wiki 目錄</a> / {cur}</p>'
     open(f[:-3] + '.html', 'w', encoding='utf-8').write(
       f'<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}｜高效學習法 Wiki</title><style>{CSS}</style></head><body>{top}{body}</body></html>')
 print('ok')
